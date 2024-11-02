@@ -10,33 +10,44 @@ const Navbar = () => {
    setNav(!nav);
  };
   return (
-    <nav className="pt-[10px] items-center ">
-      <div className="container flex items-center justify-between pb-[5px]">
+    <nav className="py-[5px] items-center">
+      <div className="container flex items-center justify-between">
         <Link>
-          <img src={fabulous} className="w-[150px] h-[150px]" alt="" />
+          <img src={fabulous} className="w-[100px] h-[100px]" alt="" />
         </Link>
-        <ul className="hidden lg:flex items-center gap-10 font-normal text-2xl">
+        <ul className="hidden lg:flex items-center gap-8 font-normal text-xl">
           <li>
-            <Link>Home</Link>
+            <Link className="hover:text-primary transition duration-200">
+              Home
+            </Link>
           </li>
           <li>
-            <Link>Rooms</Link>
+            <Link className="hover:text-primary transition duration-200">
+              Rooms
+            </Link>
           </li>
           <li>
-            <Link>About us</Link>
+            <Link className="hover:text-primary transition duration-200">
+              About Us
+            </Link>
           </li>
           <li>
-            <Link>Blog</Link>
+            <Link className="hover:text-primary transition duration-200">
+              Blog
+            </Link>
           </li>
           <li>
-            <Link>Contact US</Link>
+            <Link className="hover:text-primary transition duration-200">
+              Contact Us
+            </Link>
           </li>
-          <li>
-            <Link>Book</Link>
+          <li className="border bg-primary rounded-lg">
+            <Link className="hover:text-white transition duration-200 px-4 py-2 block">
+              Book
+            </Link>
           </li>
         </ul>
-        <GiHamburgerMenu onClick={handleNav} className="lg:hidden text-3xl"/>
-        
+        <GiHamburgerMenu onClick={handleNav} className="lg:hidden text-3xl" />
       </div>
       <div
         style={{
@@ -50,28 +61,26 @@ const Navbar = () => {
         }
       >
         <div className="flex justify-between items-center px-[15px] py-[20px]">
-          <Link>
-           Logo
-          </Link>
+          <Link>Logo</Link>
           <IoClose className="text-3xl text-primary" onClick={handleNav} />
         </div>
         <ul>
-          <li className="text-xl px-[15px] py-[20px] font-normal text-tertiary leading-[24px] border-y border-gray ">
-            <Link to="/about-us" className="leading-4" onClick={handleNav}>
+          <li className="text-xl px-[15px] py-[15px] font-normal text-tertiary border-b border-gray hover:bg-gray-100">
+            <Link to="/" onClick={handleNav}>
               Home
             </Link>
           </li>
-          <li className="text-xl px-[15px] py-[20px] font-normal text-tertiary leading-[24px] border-b border-gray ">
-            <Link to="/about-us" className="leading-4" onClick={handleNav}>
+          <li className="text-xl px-[15px] py-[15px] font-normal text-tertiary border-b border-gray hover:bg-gray-100">
+            <Link to="/about-us" onClick={handleNav}>
               About Us
             </Link>
           </li>
-          <li className="text-xl px-[15px] py-[20px] font-normal text-tertiary leading-[24px] border-b border-gray">
+          <li className="text-xl px-[15px] py-[15px] font-normal text-tertiary border-b border-gray hover:bg-gray-100">
             <Link to="/contact-us" onClick={handleNav}>
               Contact Us
             </Link>
           </li>
-          <li className="text-xl px-[15px] py-[20px] font-normal text-tertiary leading-[24px] border-b border-gray">
+          <li className="text-xl px-[15px] py-[15px] font-normal text-tertiary border-b border-gray hover:bg-gray-100">
             <Link to="/collections" onClick={handleNav}>
               Collections
             </Link>
