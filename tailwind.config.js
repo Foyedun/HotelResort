@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#F99001"
+     
       },
       backgroundImage: {
         heroBg: "url('../src/assets/Slider.svg')"
